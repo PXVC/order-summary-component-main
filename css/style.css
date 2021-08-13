@@ -1,0 +1,240 @@
+body {
+  text-align: center;
+  font-family: 'Red Hat Display', sans-serif;
+  background-color: #e0e8ff;
+  background-image: url("../images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+}
+
+.description {
+  display: inline-block;
+  width: 400px;
+  height: 600px;
+  margin-top: 130px;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  /* Hover and active */
+}
+
+.description .hero {
+  height: 220px;
+  background: url("../images/illustration-hero.svg") no-repeat center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.description .music-cost,
+.description .text,
+.description .cancel {
+  color: #7280a7;
+}
+
+.description .text {
+  width: 275px;
+  margin-left: 60px;
+  line-height: 23px;
+}
+
+.description a {
+  color: #3829e0;
+}
+
+.description h1,
+.description .music-name {
+  color: #1f2f56;
+}
+
+.description h1 {
+  font-weight: 700;
+}
+
+.description button {
+  font-weight: 900;
+  border: none;
+  background-color: #3829e0;
+  width: 350px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.description .btn {
+  color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 21px 25px -8px rgba(56, 41, 224, 0.38);
+          box-shadow: 0px 21px 25px -8px rgba(56, 41, 224, 0.38);
+}
+
+.description .cancel {
+  background-color: unset;
+  width: 140px;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+}
+
+.description .music {
+  background-color: #f5f7ff;
+  width: 350px;
+  height: 50px;
+  margin-bottom: 20px;
+  margin-left: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+}
+
+.description .music .music-icon {
+  float: left;
+  width: 35px;
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+.description .music .music-cost {
+  margin-top: -.625em;
+}
+
+.description .music .music-name,
+.description .music .music-cost {
+  margin-left: -30px;
+}
+
+.description .music .music-name {
+  margin-top: 3px;
+  font-weight: 900;
+}
+
+.description .music .change {
+  float: right;
+  margin-top: -45px;
+  margin-right: 30px;
+}
+
+.description p,
+.description button {
+  font-size: 16px;
+}
+
+.description p {
+  width: 200px;
+}
+
+.description .change:hover,
+.description .change:active,
+.description .btn:hover,
+.description .btn:active {
+  opacity: .7;
+  -webkit-transition: opacity .3s ease;
+  transition: opacity .3s ease;
+}
+
+.description .change:hover,
+.description .change:active {
+  text-decoration: none;
+}
+
+.description .btn:hover,
+.description .btn:active {
+  -webkit-box-shadow: 0px 21px 25px -8px rgba(56, 41, 224, 0.48);
+          box-shadow: 0px 21px 25px -8px rgba(56, 41, 224, 0.48);
+}
+
+.description .cancel:hover,
+.description .cancel:active {
+  color: #1f2f56;
+}
+
+/* Attribution */
+.attribution {
+  margin-top: 60px;
+  color: #7280a7;
+}
+
+.attribution a,
+.attribution a:hover,
+.attribution a:active {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: relative;
+  text-decoration: none;
+  color: #3829e0;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.attribution a:hover,
+.attribution a:hover:hover,
+.attribution a:active:hover {
+  opacity: .7;
+}
+
+.attribution a.after::after,
+.attribution a:hover.after::after,
+.attribution a:active.after::after {
+  content: '';
+  position: absolute;
+  bottom: -.25em;
+  height: 2px;
+  width: 0;
+  background-color: #3829e0;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.attribution a.before::before,
+.attribution a:hover.before::before,
+.attribution a:active.before::before {
+  content: '';
+  position: absolute;
+  top: -.25em;
+  height: 3px;
+  width: 0;
+  background-color: #3829e0;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.attribution a.first::after,
+.attribution a:hover.first::after,
+.attribution a:active.first::after {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.attribution a.first::before,
+.attribution a:hover.first::before,
+.attribution a:active.first::before {
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+}
+
+.attribution a.second::after,
+.attribution a:hover.second::after,
+.attribution a:active.second::after {
+  left: 0%;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.attribution a.second::before,
+.attribution a:hover.second::before,
+.attribution a:active.second::before {
+  right: 0%;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.attribution a.after:hover::after, .attribution a.before:hover::before,
+.attribution a:hover.after:hover::after,
+.attribution a:hover.before:hover::before,
+.attribution a:active.after:hover::after,
+.attribution a:active.before:hover::before {
+  width: 100%;
+}
+/*# sourceMappingURL=style.css.map */

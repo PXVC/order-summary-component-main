@@ -1,0 +1,221 @@
+// Color
+// Primary
+$pale-blue: hsl(225, 100%, 94%);
+$bright-blue: hsl(245, 75%, 52%);
+
+// Neutral
+$very-pale-blue: hsl(225, 100%, 98%);
+$desaturated-blue: hsl(224, 23%, 55%);
+$dark-blue: hsl(223, 47%, 23%);
+
+body {
+    text-align: center;
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: $pale-blue;
+    background-image: url('../images/pattern-background-desktop.svg');
+    background-repeat: no-repeat;
+}
+
+.description {
+    display: inline-block;
+    width: 400px;
+    height: 600px;
+    margin-top: 130px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+
+    .hero {
+        height: 220px;
+        background: url('../images/illustration-hero.svg') no-repeat center;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .music-cost,
+    .text,
+    .cancel {
+        color: $desaturated-blue;
+    }
+
+    .text {
+        width: 275px;
+        margin-left: 60px;
+        line-height: 23px;
+    }
+
+    a {
+        color: $bright-blue;
+    }
+
+    h1,
+    .music-name {
+        color: $dark-blue;
+    }
+
+    h1 {
+        font-weight: 700;
+    }
+
+    
+    button {
+        font-weight: 900;
+        border: none;
+        background-color: $bright-blue;
+        width: 350px;
+        height: 50px;
+        cursor: pointer;
+    }
+    
+    .btn {
+        color: white;
+        border-radius: 10px;
+        box-shadow: 0px 21px 25px -8px rgba(56,41,224,0.38);
+    }
+    
+    .cancel {
+        background-color: unset;
+        width: 140px;
+        transition: all .1s ease-in-out;
+    }
+
+    .music {
+        background-color: $very-pale-blue;
+        width: 350px;
+        height: 50px;
+        margin-bottom: 20px;
+        margin-left: 25px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 10px;
+
+        .music-icon {
+            float: left;
+            width: 35px;
+            margin-top: 10px;
+            margin-left: 30px;
+        }
+
+        .music-cost {
+            margin-top: -.625em;
+        }
+
+        .music-name,
+        .music-cost {
+            margin-left: -30px;
+        }
+
+        .music-name {
+            margin-top: 3px;
+            font-weight: 900;
+        }
+        .change {
+            float: right;
+            margin-top: -45px;
+            margin-right: 30px;
+        }
+    }
+
+    p,
+    button {
+        font-size: 16px;
+    }
+
+    p {
+        width: 200px;
+    }
+
+/* Hover and active */
+
+    .change:hover,
+    .change:active,
+    .btn:hover,
+    .btn:active {
+        opacity: .7;
+        transition: opacity .3s ease;
+    }
+
+    .change:hover,
+    .change:active {
+        text-decoration: none;
+    }
+
+    .btn:hover,
+    .btn:active {
+        box-shadow: 0px 21px 25px -8px rgba(56,41,224,0.48);
+    }
+
+    .cancel:hover,
+    .cancel:active {
+        color: $dark-blue;
+    }
+
+}
+
+/* Attribution */
+
+.attribution {
+    margin-top: 60px;
+    color: $desaturated-blue;
+
+    a,
+    a:hover,
+    a:active {
+        backface-visibility: hidden;
+        position: relative;
+        text-decoration: none;
+        color:$bright-blue;
+        transition: all .3s ease;
+
+        &:hover {
+            opacity: .7;
+        }
+    
+        &.after::after {
+            content: '';
+            position: absolute;
+            bottom: -.25em;
+            height: 2px;
+            width: 0;
+            background-color: $bright-blue;
+            transition: all .3s ease;
+            backface-visibility:hidden;
+        }
+
+        &.before::before {
+            content: '';
+            position: absolute;
+            top: -.25em;
+            height: 3px;
+            width: 0;
+            background-color: $bright-blue;
+            transition: all .3s ease;
+            backface-visibility:hidden;
+        }
+
+        &.first::after {
+            left: 50%;
+            transform:translateX(-50%);
+        }
+
+        &.first::before {
+            right: 50%;
+            transform:translateX(50%);
+        }
+
+        &.second::after {
+            left: 0%;
+            transform:translateX(0%);
+        }
+
+        &.second::before {
+            right: 0%;
+            transform: translateX(0%);
+        }
+
+        &.after:hover::after,
+        &.before:hover::before {
+            width: 100%;
+        }
+    }
+}
